@@ -1,0 +1,31 @@
+<br>
+  <div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td *ngFor="let p of tableHeaders">{{p}}</td>
+          <td>Action</td>
+          <td></td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tbody>
+          <tr *ngFor="let u of requestPersons" (click)="getselectedrow(u)" >
+            <td *ngFor="let c of tableHeaders">{{ u[c] }}</td>
+            <td>
+              <input type='button' 
+              class='btn btn-default btn-success'
+              (click)="onClickApprove()"
+              value='APPROVE' />
+            </td>
+            <td>
+              <input type='button' 
+              class='btn btn-default btn-danger'
+              (click)="onClickReject()"
+              value='REJECT' />
+            </td>
+          </tr>
+        </tbody>
+    </table>
+  </div>

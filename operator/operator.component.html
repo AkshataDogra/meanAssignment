@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <span>Welcome</span>
+  <span class="example-fill-remaining-space"></span>
+  <button mat-button (click)="logout()" >Logout</button>
+</mat-toolbar>
+<mat-tab-group animationDuration="0" >
+  <mat-tab label="My Profile">
+    <app-update-person [readonly]=true ></app-update-person>
+  </mat-tab>
+  <mat-tab label="Update Profile" >
+    <app-update-person [readonly]=false ></app-update-person>
+  </mat-tab>
+  <mat-tab label="Create User" >
+    <app-create-user [idValue]=idValue></app-create-user>
+    <br /><br />
+    <div className="container">
+      <input 
+        type="button" 
+        class="btn btn default btn-success" 
+        (click)="onClickCreate()"
+        value="SEND FOR APPROVAL" />
+  </div>
+  </mat-tab>
+  <mat-tab label="Update User" id="4">
+  </mat-tab>
+</mat-tab-group>

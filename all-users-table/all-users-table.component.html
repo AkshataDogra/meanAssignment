@@ -1,0 +1,17 @@
+<br>
+  <div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <td *ngFor="let p of tableHeaders">{{p}}</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tbody>
+          <tr *ngFor="let u of allUsersData" >
+            <td *ngFor="let c of tableHeaders">{{ u[c] }}</td>
+          </tr>
+        </tbody>
+    </table>
+  </div>

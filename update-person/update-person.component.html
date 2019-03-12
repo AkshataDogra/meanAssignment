@@ -1,0 +1,170 @@
+<br /> <br />
+<div class="col-7 bg-light">
+  <div class="form-group">
+    <label>PersonalUniqueId</label>
+    <input type="text"
+    [(ngModel)]="person.PersonalUniqueID"
+    name="PersonalUniqueId"
+    class="form-control"
+    disabled />
+  </div>
+  <div class="form-group">
+    <label>FullName</label>
+    <div>
+      <input type="text"
+      [(ngModel)]="person.FullName.FirstName"
+      name="FirstName"
+      class="form-control"
+      disabled={{readonly}}
+       />
+    </div>
+    <div>
+      <input type="text"
+      [(ngModel)]="person.FullName.MiddleName"
+      name="MiddleName"
+      class="form-control"
+      disabled={{readonly}} />
+    </div>
+    <div>
+      <input type="text"
+      [(ngModel)]="person.FullName.LastName"
+      name="LastName"
+      class="form-control"
+      disabled={{readonly}} />
+    </div>
+  </div>
+  <div class="form-group">
+    <label>Gender</label>
+    <select
+    name="Gender"
+    class="form-control"
+    [(ngModel)]="person.Gender"
+    disabled={{readonly}} >
+      <option *ngFor="let g of genders" [value]="g">{{ g }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>DateOfBirth</label>
+    <input type="date"
+    [(ngModel)]="person.DateOfBirth"
+    name="DateOfBirth"
+    class="form-control"
+    disabled={{readonly}} />
+    </div>
+  <div class="form-group">
+    <label>Age</label>
+    <input type="text"
+    [(ngModel)]="person.Age"
+    name="Age"
+    class="form-control"
+    disabled={{readonly}} />
+  </div>
+  <div class="form-group">
+    <label>Address</label>
+    <div >
+      <input type="text"
+      [(ngModel)]="person.Address.FlatNo"
+      name="FlatNo"
+      class="form-control"
+      placeholder="Flat/Bungalow Number"
+      disabled={{readonly}} />
+      <input type="text"
+      [(ngModel)]="person.Address.SocietyName"
+      name="SocietyName"
+      class="form-control"
+      placeholder="Society Name"
+      disabled={{readonly}} />
+      <input type="text"
+      [(ngModel)]="person.Address.AreaName"
+      name="AreaName"
+      class="form-control"
+      placeholder="Street Name/Area Name"
+      disabled={{readonly}} />
+    </div>
+  </div>
+  <div class="form-group">
+    <label>City</label>
+    <input type="text"
+    [(ngModel)]="person.City"
+    name="City"
+    class="form-control"
+    disabled={{readonly}} />
+  </div>
+  <div class="form-group">
+    <label>State</label>
+    <input type="text"
+    [(ngModel)]="person.State"
+    name="State"
+    class="form-control"
+    disabled={{readonly}} />
+  </div>
+  <div class="form-group">
+    <label>PinCode</label>
+    <input type="text"
+    [(ngModel)]="person.PinCode"
+    name="PinCode"
+    class="form-control"
+    disabled={{readonly}} />
+  </div>
+  <div class="form-group">
+    <label>PhoneNo</label>
+    <input type="text"
+    [(ngModel)]="person.PhoneNo"
+    name="PhoneNo"
+    class="form-control"
+    disabled={{readonly}} />
+  </div>
+  <div class="form-group">
+    <label>MobileNo</label>
+    <input type="text"
+    [(ngModel)]="person.MobileNo"
+    name="MobileNo"
+    class="form-control"
+    disabled={{readonly}} />
+  </div>
+  <div class="form-group">
+    <label>PhysicalDisability</label>
+    <select
+    name="PhysicalDisability"
+    class="form-control"
+    [(ngModel)]="person.PhysicalDisability"
+    disabled={{readonly}} >
+      <option *ngFor="let g of disability" [value]="g">{{ g }}</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>MaritalStatus</label>
+      <select
+      name="MaritalStatus"
+      class="form-control"
+      [(ngModel)]="person.MaritalStatus"
+      disabled={{readonly}} >
+        <option *ngFor="let ms of mStatus" [value]="ms">{{ ms }}</option>
+      </select>
+  </div>
+  <div class="form-group">
+    <label>EducationStatus</label>
+      <select
+      name="EducationStatus"
+      class="form-control"
+      [(ngModel)]="person.EducationStatus"
+      disabled={{readonly}} >
+        <option *ngFor="let es of eStatus" [value]="es">{{ es }}</option>
+      </select>
+  </div>
+  <div class="form-group">
+    <label>BirthSign</label>
+    <input type="text"
+    [(ngModel)]="person.BirthSign"
+    name="BirthSign"
+    class="form-control"
+    disabled={{readonly}} />
+  </div>
+    <div *ngIf="this.readonly === false">
+      <input type='button'
+        class='btn btn-default btn-warning text-white'
+        value='UPDATE'
+        [disabled]="this.readonly"  
+        (click)="onClickUpdate()" />
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<br /><br />
+<div class="col-7 bg-light">
+  <div class="form-group">
+    <label>UserId</label>
+    <input
+    type="text"
+    name="UserId"
+    class="form-control"
+    value={{idValue}}    
+    disabled />
+  </div>
+  <div>
+      <label>UserName</label>
+      <input
+      [(ngModel)]="user.UserName"
+      type="text"
+      name="UserName"
+      class="form-control" />
+  </div>
+  <div>
+    <label>EmailAddress</label>
+    <input
+    [(ngModel)]="user.EmailAddress"
+    type="text"
+    name="EmailAddress"
+    class="form-control" />
+  </div>
+  <div>
+    <label>Password</label>
+    <input
+    [(ngModel)]="user.Password"
+    type="text"
+    name="Password"
+    class="form-control" />
+  </div>
+  <div>
+    <label>RoleId</label>
+    <input
+    [(ngModel)]="user.RoleId"
+    type="text"
+    name="RoleId"
+    class="form-control" />
+ </div>
+ <div class="form-group">
+    <label>Choose Role</label>
+    <select
+    [(ngModel)]="user.RoleName"
+    name="RoleName"
+    class="form-control" >
+      <option *ngFor="let role of userRoles" [value]="role">{{ role }}</option>
+    </select>
+  </div>
+  <app-create-person [idValue]=idValue></app-create-person>
+</div>

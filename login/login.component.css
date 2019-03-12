@@ -1,0 +1,20 @@
+.example-card {
+  width: 25%;
+  margin-top: 10%;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  flex: 1 1 auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-fill-remaining-space {
+  /* This fills the remaining space, by using flexbox.
+     Every toolbar row uses a flexbox row layout. */
+  flex: 1 1 auto;
+}
